@@ -559,7 +559,7 @@ function replace_variables () {
 			create_rand;
 		fi;
 		# don't modify built-in and other problematic variables
-		ignore='\$_\|$true\|$false\|$read\|$verb\|$error\|$null\|$arg\|>\|&\|+\|@\|\/\|-\|\$$';
+		ignore='\$_\|$Credential\|$Byte\|$Hash\|$Csv\|$Clixml\|$Object\|$item\|$Process\|$Instance\|$version\|$File\|$Name\|$Path\|$env\|$true\|$false\|$read\|$verb\|$error\|$null\|$arg\|>\|&\|+\|@\|\/\|-\|\$$';
 		if grep --color=always --color=no -qi "$ignore" <<< "$var"; then
 			if [[ ! -f "$dictionary" ]]; then
 				rand="$(printf %"${lvl[2]}"s\\n)";
